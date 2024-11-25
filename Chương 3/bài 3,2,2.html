@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Giá Hoa Quả</title>
+    <style>
+    html {
+        width: 500px;
+        margin: 41px auto;
+    }
+    </style>
+</head>
+<body>
+    <h1>Tra Cứu Giá Hoa Quả</h1>
+    <label for="ten_hoa_qua">Nhập tên hoa quả:</label>
+    <input type="text" id="ten_hoa_qua" placeholder="Ví dụ: Măng Cụt" />
+    <button onclick="xemGia()">Xem giá</button>
+    <p id="result"></p>
+    <script>
+        function xemGia() {
+            let hoaQua = document.getElementById("ten_hoa_qua").value.trim();
+            let gia;
+            switch (hoaQua.toLowerCase()) {
+                case "oi":
+                    gia = "20000 VNĐ/kg";
+                    break;
+                case "dưa hấu":
+                    gia = "20000 VNĐ/kg";
+                    break;
+                case "táo":
+                    gia = "30000 VNĐ/kg";
+                    break;
+                case "cam":
+                    gia = "40000 VNĐ/kg";
+                    break;
+                case "chôm chôm":
+                    gia = "40000 VNĐ/kg";
+                    break;
+                case "măng cụt":
+                    gia = "50000 VNĐ/kg";
+                    break;
+                default:
+                    gia = "Tìm không thấy";
+            }
+            document.getElementById("result").innerText = gia;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Mua Bán</title>
+    <link rel="stylesheet" href="style3.4.css">
+  </head>
+  <body>
+      <div class="container">
+          <h1>Trang Web Mua Bán</h1>
+  
+          <table id="product-table">
+              <thead>
+                  <tr>
+                      <th>STT</th>
+                      <th>Tên hàng hóa</th>
+                      <th>Số lượng có</th>
+        <th>Bảng giá</th>
+        <th>Số lượng mua</th>
+        <th>Chọn mua</th>
+        </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>CPU</td>
+                    <td>10</td>
+                    <td>120 $</td>
+                    <td><input type="number" id="qty-cpu" disabled min="1"></td>
+                    <td><input type="checkbox" id="check-cpu" onclick="toggleQuantity('cpu')"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>HDD</td>
+                    <td>120</td>
+                    <td>130 $</td>
+                    <td><input type="number" id="qty-hdd" disabled min="1"></td>
+                    <td><input type="checkbox" id="check-hdd" onclick="toggleQuantity('hdd')"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>RAM</td>
+                    <td>105</td>
+                    <td>90 $</td>
+                    <td><input type="number" id="qty-ram" disabled min="1"></td>
+                    <td><input type="checkbox" id="check-ram" onclick="toggleQuantity('ram')"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>ROM</td>
+                    <td>295</td>
+                    <td>80 $</td>
+                    <td><input type="number" id="qty-rom" disabled min="1"></td>
+                    <td><input type="checkbox" id="check-rom" onclick="toggleQuantity('rom')"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Tổng cộng:</td>
+                    <td colspan="2"><span id="total-amount">0</span> $</td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td colspan="2">
+                        <button onclick="calculateTotal()">OK</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td colspan="2">
+                        <label><input type="checkbox" id="check-vat"> VAT 10%</label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttons">
+            <button onclick="resetValues()">Nhập lại</button>
+            <button onclick="printPage()">In</button>
+        </div>
+    </div>
+    <script src="script3.4.js"></script>
+</body>
+</html>

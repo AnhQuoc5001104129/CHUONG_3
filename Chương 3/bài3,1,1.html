@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lãi xuất năm</title>
+</head>
+<body>
+    <script>
+        function tinhLaiDon(goc, laiSuat, soNam) {
+          let laiMoiNam = goc * laiSuat;
+          let tongTien = goc + laiMoiNam * soNam;
+          return tongTien;
+        }
+        let goc = parseFloat(prompt("Nhập số tiền vay (triệu đồng):")); 
+        let laiSuat = parseFloat(prompt("Nhập lãi suất hàng năm (%):")) / 100; 
+        let soNam = parseInt(prompt("Nhập số năm vay:"));
+        let ketQua = tinhLaiDon(goc, laiSuat, soNam);
+        alert("Số tiền cần phải trả sau " + soNam + " năm là: " + ketQua.toFixed(2) + " triệu đồng.");
+    </script>
+</body>
+</html>

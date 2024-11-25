@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra Năm Nhuận</title>
+</head>
+<body>
+    <h1>Kiểm tra Năm Nhuận</h1>
+    <p>Nhập vào năm cần kiểm tra:</p>
+    <input type="number" id="yearInput" placeholder="Nhập năm" />
+    <button onclick="checkLeapYear()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function checkLeapYear() {
+       
+            let year = parseInt(document.getElementById("yearInput").value);
+            if (isNaN(year)) {
+                document.getElementById("result").innerText = "Vui lòng nhập một năm hợp lệ!";
+                return;
+            }
+            if ((year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0)) {
+                document.getElementById("result").innerText = year + " là năm nhuận!";
+            } else {
+                document.getElementById("result").innerText = year + " không phải là năm nhuận!";
+            }
+        }
+    </script>
+</body>
+</html>
